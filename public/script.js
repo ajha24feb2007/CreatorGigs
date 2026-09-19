@@ -95,7 +95,7 @@ function displayCreators(creators) {
                 <h3>${escapeHTML(creator.name)}</h3>
 
                 <div class="service-title">
-                    ${escapeHTML(creator.serviceTitle)}
+                    ${escapeHTML(creator.serviceTitle || "")}
                 </div>
 
                 <p class="gig-description">
@@ -107,7 +107,7 @@ function displayCreators(creators) {
 
                     <span class="rating-number">
                         ${rating.toFixed(1)}
-                        ((${creator.reviewCount || 0} reviews)
+                        (${creator.reviewCount || 0} reviews)
                     </span>
                 </div>
 
@@ -182,7 +182,7 @@ async function createCreator(event) {
                 email,
                 skill,
                 price: Number(price),
-                service_title: serviceTitle,
+                serviceTitle,
                 description
 
             })
@@ -195,7 +195,7 @@ async function createCreator(event) {
 
         if (!response.ok) {
 
-            throw new Error(data.error || "Failed to create profile");
+            throw new Error(data.message || data.error || "Failed to create profile");
 
         }
 
@@ -280,13 +280,13 @@ async function bookCreator(creatorId) {
 
             body: JSON.stringify({
 
-                creator_id: creatorId,
+                creatorId,
 
-                client_name: clientName,
+                clientName,
 
-                client_email: clientEmail,
+                clientEmail,
 
-                booking_date: bookingDate,
+                bookingDate,
 
                 message: message
 
@@ -301,7 +301,7 @@ async function bookCreator(creatorId) {
         if (!response.ok) {
 
             throw new Error(
-                data.error || "Booking failed"
+                data.message || data.error || "Booking failed"
             );
 
         }
@@ -398,7 +398,7 @@ async function addReview(creatorId) {
         if (!response.ok) {
 
             throw new Error(
-                data.error || "Review failed"
+                data.message || data.error || "Review failed"
             );
 
         }
@@ -453,7 +453,7 @@ function searchCreators() {
 
             creator.skill.toLowerCase().includes(searchText) ||
 
-            creator.service_title.toLowerCase().includes(searchText) ||
+            (creator.serviceTitle || "").toLowerCase().includes(searchText) ||
 
             creator.description.toLowerCase().includes(searchText)
 
