@@ -95,7 +95,7 @@ function displayCreators(creators) {
                 <h3>${escapeHTML(creator.name)}</h3>
 
                 <div class="service-title">
-                    ${escapeHTML(creator.service_title)}
+                    ${escapeHTML(creator.serviceTitle)}
                 </div>
 
                 <p class="gig-description">
@@ -107,7 +107,7 @@ function displayCreators(creators) {
 
                     <span class="rating-number">
                         ${rating.toFixed(1)}
-                        (${creator.review_count || 0} reviews)
+                        ((${creator.reviewCount || 0} reviews)
                     </span>
                 </div>
 
@@ -378,15 +378,16 @@ async function addReview(creatorId) {
 
             body: JSON.stringify({
 
-                creator_id: creatorId,
+    creatorId: creatorId,
 
-                reviewer_name: reviewerName,
+    reviewerName: reviewerName,
 
-                rating: rating,
+    rating: rating,
 
-                comment: comment
+    comment: comment
 
-            })
+})
+
 
         });
 
