@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creatorGigs>
+  <creators>
+    <creator id="1">
+      <name>Alex</name>
+      <email>alex@example.com</email>
+      <skill>Design</skill>
+      <price currency="INR">500</price>
+      <serviceTitle>Instagram Post Design</serviceTitle>
+      <description>Creative and modern Instagram post designs.</description>
+      <rating>4.8</rating>
+      <reviewCount>5</reviewCount>
+      <createdAt>2026-09-18T21:50:11.590Z</createdAt>
+    </creator>
+    <creator id="2">
+      <name>Rahul</name>
+      <email>rahul@example.com</email>
+      <skill>Video Editing</skill>
+      <price currency="INR">800</price>
+      <serviceTitle>YouTube Video Editing</serviceTitle>
+      <description>Professional editing for YouTube videos and reels.</description>
+      <rating>4.6</rating>
+      <reviewCount>4</reviewCount>
+      <createdAt>2026-09-18T21:50:11.591Z</createdAt>
+    </creator>
+    <creator id="3">
+      <name>Priya</name>
+      <email>priya@example.com</email>
+      <skill>Tutoring</skill>
+      <price currency="INR">300</price>
+      <serviceTitle>Math Tutoring</serviceTitle>
+      <description>Easy-to-understand mathematics tutoring.</description>
+      <rating>4.9</rating>
+      <reviewCount>8</reviewCount>
+      <createdAt>2026-09-18T21:50:11.591Z</createdAt>
+    </creator>
+  </creators>
+  <bookings />
+  <reviews />
+</creatorGigs>

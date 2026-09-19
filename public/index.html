@@ -5,308 +5,742 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CreatorGigs</title>
+    <title>CreatorGigs | Find Young Talent</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
+    <!-- ================= BACKGROUND ================= -->
+
+    <div class="background">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="stars"></div>
+    </div>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
 
         <div class="logo">
+            <span class="logo-icon">C</span>
             Creator<span>Gigs</span>
         </div>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#gigs">Browse Gigs</a>
-            <a href="#categories">Categories</a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#categories">Browse Gigs</a>
             <a href="#creator">Become a Creator</a>
-            <a href="#" onclick="showLoginMessage()">Login</a>
-        </div>
+            <a href="#gigs">Featured</a>
+        </nav>
 
-    </nav>
+        <a href="#creator" class="nav-button">
+            Join as Creator
+        </a>
+
+    </header>
 
 
-    <!-- HERO -->
-    <section class="hero" id="home">
+    <!-- ================= HERO ================= -->
 
-        <div class="hero-content">
+    <main id="home">
 
-            <p class="hero-small">
-                THE CREATOR MARKETPLACE
-            </p>
+        <section class="hero">
 
-            <h1>
-                Find talented
-                <br>
-                young creators.
-            </h1>
+            <div class="hero-text">
 
-            <p>
-                Hire students and young creators for design,
-                video editing, tutoring, music and more.
-            </p>
+                <div class="small-badge">
+                    ✦ The marketplace for young talent
+                </div>
 
-            <div class="hero-buttons">
+                <h1>
+                    Your skills.
+                    <span>Your opportunity.</span>
+                </h1>
 
-                <a href="#gigs" class="btn primary">
-                    Find a Creator
-                </a>
+                <p>
+                    Discover talented young creators for design,
+                    video editing, tutoring, music and more.
+                    Or turn your skills into your next opportunity.
+                </p>
 
-                <a href="#creator" class="btn secondary">
-                    Become a Creator
-                </a>
+                <div class="hero-buttons">
+
+                    <a href="#gigs" class="primary-button">
+                        Find a Creator →
+                    </a>
+
+                    <a href="#creator" class="outline-button">
+                        Become a Creator
+                    </a>
+
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="hero-stats">
+
+                    <div>
+                        <strong>500+</strong>
+                        <span>Creators</span>
+                    </div>
+
+                    <div>
+                        <strong>2,000+</strong>
+                        <span>Bookings</span>
+                    </div>
+
+                    <div>
+                        <strong>4.9★</strong>
+                        <span>Average Rating</span>
+                    </div>
+
+                </div>
 
             </div>
 
-        </div>
 
-    </section>
+            <!-- HERO VISUAL -->
 
+            <div class="hero-visual">
 
-    <!-- SITE STATISTICS -->
-    <section class="site-stats" aria-label="CreatorGigs site statistics">
+                <div class="creator-photo">
 
-        <div class="stat-card">
-            <span class="stat-icon" aria-hidden="true">★</span>
-            <strong id="siteAverageRating">0.0</strong>
-            <span>Average Rating</span>
-        </div>
+                    <div class="photo-placeholder">
+                        👨‍💻
+                    </div>
 
-        <div class="stat-card">
-            <span class="stat-icon" aria-hidden="true">◉</span>
-            <strong id="siteUserCount">0</strong>
-            <span>Creator Profiles</span>
-        </div>
-
-        <div class="stat-card">
-            <span class="stat-icon" aria-hidden="true">✦</span>
-            <strong id="siteReviewCount">0</strong>
-            <span>Reviews</span>
-        </div>
-
-    </section>
+                </div>
 
 
-    <!-- SEARCH -->
-    <section class="search-section">
+                <div class="floating-card design">
+                    🎨 Graphic Design
+                </div>
 
-        <div class="search-box">
+                <div class="floating-card editing">
+                    🎬 Video Editing
+                </div>
 
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search for design, editing, tutoring..."
-            >
+                <div class="floating-card tutoring">
+                    📚 Tutoring
+                </div>
 
-            <button onclick="searchCreators()">
-                Search
-            </button>
+                <div class="floating-card music">
+                    🎵 Music
+                </div>
 
-        </div>
+                <div class="handwriting">
+                    create. earn. grow.
+                </div>
 
-    </section>
-
-
-    <!-- CATEGORIES -->
-    <section class="categories" id="categories">
-
-        <div class="section-heading">
-
-            <p>EXPLORE</p>
-
-            <h2>Popular Categories</h2>
-
-        </div>
-
-
-        <div class="category-grid">
-
-            <button onclick="filterCategory('Design')" class="category-card">
-                <span>🎨</span>
-                <h3>Design</h3>
-                <p>Logos, posters & social media</p>
-            </button>
-
-
-            <button onclick="filterCategory('Video Editing')" class="category-card">
-                <span>🎬</span>
-                <h3>Video Editing</h3>
-                <p>Reels, YouTube & short videos</p>
-            </button>
-
-
-            <button onclick="filterCategory('Tutoring')" class="category-card">
-                <span>📚</span>
-                <h3>Tutoring</h3>
-                <p>Learn from talented students</p>
-            </button>
-
-
-            <button onclick="filterCategory('Music')" class="category-card">
-                <span>🎵</span>
-                <h3>Music</h3>
-                <p>Beats, vocals & production</p>
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- CREATOR/GIGS -->
-    <section class="gigs-section" id="gigs">
-
-        <div class="section-heading">
-
-            <p>DISCOVER TALENT</p>
-
-            <h2>Featured Creators</h2>
-
-        </div>
-
-
-        <div id="gigGrid" class="gig-grid">
-
-            <div class="loading">
-                Loading creators...
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- BECOME CREATOR -->
-    <section class="creator-section" id="creator">
+        <!-- ================= SEARCH ================= -->
 
-        <div class="creator-container">
+        <section class="search-area">
 
-            <div class="creator-text">
+            <form class="search-box" id="searchForm">
 
-                <p>START EARNING</p>
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for a skill, service or creator..."
+                >
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="section" id="categories">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    EXPLORE
+                </p>
 
                 <h2>
-                    Become a Creator
+                    Popular <span>Services</span>
                 </h2>
 
                 <p>
-                    Share your skills, find clients and earn money
-                    doing what you love.
+                    Find the right creator for your next project.
                 </p>
 
             </div>
 
 
-            <form id="creatorForm" class="creator-form">
+            <div class="category-grid">
 
-                <input
-                    type="text"
-                    id="creatorName"
-                    placeholder="Your Name"
-                    required
-                >
+                <div class="category-card"
+                     data-category="design">
 
+                    <div class="category-icon">
+                        🎨
+                    </div>
 
-                <input
-                    type="email"
-                    id="creatorEmail"
-                    placeholder="Your Email"
-                    required
-                >
+                    <h3>Design</h3>
 
+                    <p>
+                        Logos, posters, social media & more
+                    </p>
 
-                <select id="creatorSkill" required>
+                    <span class="arrow">→</span>
 
-                    <option value="">
-                        Select Your Skill
-                    </option>
-
-                    <option value="Design">
-                        Design
-                    </option>
-
-                    <option value="Video Editing">
-                        Video Editing
-                    </option>
-
-                    <option value="Tutoring">
-                        Tutoring
-                    </option>
-
-                    <option value="Music">
-                        Music
-                    </option>
-
-                    <option value="Programming">
-                        Programming
-                    </option>
-
-                    <option value="Writing">
-                        Writing
-                    </option>
-
-                </select>
+                </div>
 
 
-                <input
-                    type="number"
-                    id="creatorPrice"
-                    placeholder="Starting Price (₹)"
-                    min="1"
-                    required
-                >
+                <div class="category-card"
+                     data-category="video">
+
+                    <div class="category-icon">
+                        🎬
+                    </div>
+
+                    <h3>Video Editing</h3>
+
+                    <p>
+                        Reels, YouTube videos & shorts
+                    </p>
+
+                    <span class="arrow">→</span>
+
+                </div>
 
 
-                <input
-                    type="text"
-                    id="serviceTitle"
-                    placeholder="Service Title"
-                    required
-                >
+                <div class="category-card"
+                     data-category="tutoring">
+
+                    <div class="category-icon">
+                        📚
+                    </div>
+
+                    <h3>Tutoring</h3>
+
+                    <p>
+                        School subjects & skill learning
+                    </p>
+
+                    <span class="arrow">→</span>
+
+                </div>
 
 
-                <textarea
-                    id="serviceDescription"
-                    placeholder="Describe your service..."
-                    rows="5"
-                    required
-                ></textarea>
+                <div class="category-card"
+                     data-category="music">
+
+                    <div class="category-icon">
+                        🎵
+                    </div>
+
+                    <h3>Music</h3>
+
+                    <p>
+                        Beats, vocals, mixing & more
+                    </p>
+
+                    <span class="arrow">→</span>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
-                <button type="submit" class="btn primary">
-                    Create My Profile 🚀
+        <!-- ================= FEATURED GIGS ================= -->
+
+        <section class="section gigs-section" id="gigs">
+
+            <div class="gigs-heading">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        TOP CREATORS
+                    </p>
+
+                    <h2>
+                        Featured <span>Services</span>
+                    </h2>
+
+                    <p>
+                        Services from our talented creator community.
+                    </p>
+
+                </div>
+
+                <button class="view-all" id="viewAllBtn">
+                    View All →
                 </button>
 
-            </form>
-
-        </div>
-
-    </section>
+            </div>
 
 
-    <!-- FOOTER -->
+            <div class="gig-grid" id="gigGrid">
+
+                <!-- GIG 1 -->
+
+                <article class="gig-card">
+
+                    <div class="gig-image design-image">
+                        🎨
+
+                        <span class="gig-tag">
+                            DESIGN
+                        </span>
+                    </div>
+
+                    <div class="gig-content">
+
+                        <h3>
+                            Instagram Post Design
+                        </h3>
+
+                        <p class="creator">
+                            By Alex Sharma
+                        </p>
+
+
+                        <div class="rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <strong>4.9</strong>
+
+                            <small>
+                                (128 reviews)
+                            </small>
+
+                        </div>
+
+
+                        <p class="description">
+                            Modern and engaging social media
+                            designs for your brand.
+                        </p>
+
+
+                        <div class="gig-footer">
+
+                            <div>
+                                <small>
+                                    STARTING FROM
+                                </small>
+
+                                <strong>
+                                    ₹500
+                                </strong>
+                            </div>
+
+                            <button class="view-gig">
+                                View Gig
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- GIG 2 -->
+
+                <article class="gig-card">
+
+                    <div class="gig-image video-image">
+                        🎬
+
+                        <span class="gig-tag">
+                            VIDEO
+                        </span>
+                    </div>
+
+                    <div class="gig-content">
+
+                        <h3>
+                            YouTube Video Editing
+                        </h3>
+
+                        <p class="creator">
+                            By Rahul Verma
+                        </p>
+
+
+                        <div class="rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <strong>4.8</strong>
+
+                            <small>
+                                (96 reviews)
+                            </small>
+
+                        </div>
+
+
+                        <p class="description">
+                            Clean, professional and engaging
+                            YouTube video editing.
+                        </p>
+
+
+                        <div class="gig-footer">
+
+                            <div>
+                                <small>
+                                    STARTING FROM
+                                </small>
+
+                                <strong>
+                                    ₹800
+                                </strong>
+                            </div>
+
+                            <button class="view-gig">
+                                View Gig
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- GIG 3 -->
+
+                <article class="gig-card">
+
+                    <div class="gig-image tutor-image">
+                        📚
+
+                        <span class="gig-tag">
+                            TUTORING
+                        </span>
+                    </div>
+
+                    <div class="gig-content">
+
+                        <h3>
+                            Mathematics Tutoring
+                        </h3>
+
+                        <p class="creator">
+                            By Priya Singh
+                        </p>
+
+
+                        <div class="rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <strong>5.0</strong>
+
+                            <small>
+                                (74 reviews)
+                            </small>
+
+                        </div>
+
+
+                        <p class="description">
+                            Personalised mathematics sessions
+                            for school and college students.
+                        </p>
+
+
+                        <div class="gig-footer">
+
+                            <div>
+                                <small>
+                                    STARTING FROM
+                                </small>
+
+                                <strong>
+                                    ₹300/hr
+                                </strong>
+                            </div>
+
+                            <button class="view-gig">
+                                View Gig
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BECOME CREATOR ================= -->
+
+        <section class="creator-section" id="creator">
+
+            <div class="creator-box">
+
+
+                <!-- LEFT -->
+
+                <div class="creator-visual">
+
+                    <div class="creator-message">
+                        Got a skill?
+                    </div>
+
+                    <div class="creator-person">
+                        🧑‍🎨
+                    </div>
+
+                    <div class="creator-floating-icon icon-1">
+                        🎨
+                    </div>
+
+                    <div class="creator-floating-icon icon-2">
+                        💻
+                    </div>
+
+                    <div class="creator-floating-icon icon-3">
+                        ⭐
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT FORM -->
+
+                <div class="creator-form-container">
+
+                    <p class="section-label">
+                        JOIN THE COMMUNITY
+                    </p>
+
+                    <h2>
+                        Become a <span>Creator</span>
+                    </h2>
+
+                    <p class="form-subtitle">
+                        Turn your skills into opportunities.
+                        Create your profile and start offering services.
+                    </p>
+
+
+                    <form id="creatorForm">
+
+
+                        <!-- NAME + EMAIL -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label>
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="creatorName"
+                                    placeholder="e.g. Abhishek Jha"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="creatorEmail"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CATEGORY + PRICE -->
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label>
+                                    Main Skill
+                                </label>
+
+                                <select id="creatorSkill" required>
+
+                                    <option value="">
+                                        Select your skill
+                                    </option>
+
+                                    <option value="Design">
+                                        🎨 Design
+                                    </option>
+
+                                    <option value="Video Editing">
+                                        🎬 Video Editing
+                                    </option>
+
+                                    <option value="Tutoring">
+                                        📚 Tutoring
+                                    </option>
+
+                                    <option value="Music">
+                                        🎵 Music
+                                    </option>
+
+                                    <option value="Programming">
+                                        💻 Programming
+                                    </option>
+
+                                    <option value="Writing">
+                                        ✍️ Writing
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Starting Price
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="creatorPrice"
+                                    placeholder="₹500"
+                                    min="1"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SERVICE -->
+
+                        <div class="form-group">
+
+                            <label>
+                                Service Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="serviceTitle"
+                                placeholder="e.g. I will design Instagram posts"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- DESCRIPTION -->
+
+                        <div class="form-group">
+
+                            <label>
+                                About Your Service
+                            </label>
+
+                            <textarea
+                                id="serviceDescription"
+                                placeholder="Tell clients what you can do..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <!-- BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="create-button"
+                        >
+                            🚀 Create Creator Profile
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
-        <div class="logo">
+        <div class="footer-logo">
             Creator<span>Gigs</span>
+        </div>sssss
+         <p><h4><q>Team leader :- Saloni Bhardwaj</q></h4></p>
+ <p>Published by <strong>CODE ARCHITECTS</strong></p>
+ <p>Team members: Saloni Bhardwaj , Abhishek Kumar Jha</p>
+        <p>
+            Connecting young talent with real opportunities.
+        </p>
+
+        <div class="socials">
+            Instagram &nbsp; • &nbsp;
+            LinkedIn &nbsp; • &nbsp;
+            GitHub
         </div>
 
-        <p>
-            Connecting young talent with opportunities.
-        </p>
-
-        <p>
-            © 2026 CreatorGigs
-        </p>
+        <small>
+            © 2026 CreatorGigs. Built for young creators.
+        </small>
 
     </footer>
 
 
     <!-- JAVASCRIPT -->
+
     <script src="script.js"></script>
 
 </body>
