@@ -1,0 +1,12 @@
+{
+   "name": "creator-gigs",
+   "version": "1.0.0",
+   "description": "Creator marketplace",
+   "main": "server.js",
+   "scripts": {
+      "start": "node server.js"
+   },
+   "dependencies": {
+      "express": "^5.2.1"
+   }
+}

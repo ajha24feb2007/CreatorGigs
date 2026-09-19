@@ -1,0 +1,42 @@
+{
+  "creators": [
+    {
+      "id": 1,
+      "name": "Alex",
+      "email": "alex@example.com",
+      "skill": "Design",
+      "price": 500,
+      "serviceTitle": "Instagram Post Design",
+      "description": "Creative and modern Instagram post designs.",
+      "rating": 4.8,
+      "reviewCount": 5,
+      "createdAt": "2026-09-18T21:50:11.590Z"
+    },
+    {
+      "id": 2,
+      "name": "Rahul",
+      "email": "rahul@example.com",
+      "skill": "Video Editing",
+      "price": 800,
+      "serviceTitle": "YouTube Video Editing",
+      "description": "Professional editing for YouTube videos and reels.",
+      "rating": 4.6,
+      "reviewCount": 4,
+      "createdAt": "2026-09-18T21:50:11.591Z"
+    },
+    {
+      "id": 3,
+      "name": "Priya",
+      "email": "priya@example.com",
+      "skill": "Tutoring",
+      "price": 300,
+      "serviceTitle": "Math Tutoring",
+      "description": "Easy-to-understand mathematics tutoring.",
+      "rating": 4.9,
+      "reviewCount": 8,
+      "createdAt": "2026-09-18T21:50:11.591Z"
+    }
+  ],
+  "bookings": [],
+  "reviews": []
+}
