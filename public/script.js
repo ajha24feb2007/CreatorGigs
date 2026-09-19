@@ -40,6 +40,7 @@ async function loadCreators() {
 
         allCreators = await response.json();
 
+        updateSiteStats(allCreators);
         displayCreators(allCreators);
 
     } catch (error) {
@@ -593,4 +594,35 @@ function escapeHTML(value) {
 
         .replace(/'/g, "&#039;");
 
+}
+
+
+/* =========================================
+   SITE STATISTICS
+   ========================================= */
+
+function updateSiteStats(creators) {
+
+    const creatorCount = creators.length;
+
+    const totalRating = creators.reduce(
+        (sum, creator) => sum + Number(creator.rating || 0),
+        0
+    );
+
+    const averageRating = creatorCount > 0
+        ? totalRating / creatorCount
+        : 0;
+
+    const totalReviews = creators.reduce(
+        (sum, creator) => sum + Number(creator.reviewCount || 0),
+        0
+    );
+
+    document.getElementById("siteAverageRating").textContent =
+        averageRating.toFixed(1);
+
+    document.getElementById("siteUserCount").textContent = creatorCount;
+
+    document.getElementById("siteReviewCount").textContent = totalReviews;
 }
