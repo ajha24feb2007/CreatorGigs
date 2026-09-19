@@ -619,10 +619,19 @@ function updateSiteStats(creators) {
         0
     );
 
-    document.getElementById("siteAverageRating").textContent =
-        averageRating.toFixed(1);
+    const averageRatingElement = document.getElementById("siteAverageRating");
+    const userCountElement = document.getElementById("siteUserCount");
+    const reviewCountElement = document.getElementById("siteReviewCount");
 
-    document.getElementById("siteUserCount").textContent = creatorCount;
+    if (averageRatingElement) {
+        averageRatingElement.textContent = averageRating.toFixed(1);
+    }
 
-    document.getElementById("siteReviewCount").textContent = totalReviews;
+    if (userCountElement) {
+        userCountElement.textContent = creatorCount;
+    }
+
+    if (reviewCountElement) {
+        reviewCountElement.textContent = totalReviews;
+    }
 }
